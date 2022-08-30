@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	function filterSlider (activeCategory) {
-		let mediaSlides = document.querySelectorAll('.media-list__item')
+		let mediaSlides = document.querySelectorAll('.media-slide')
 		for (let i = 0; i < mediaSlides.length; i++) {
 			if (mediaSlides[i].dataset.filter === activeCategory) {
 				mediaSlides[i].style.display = ""
@@ -320,12 +320,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		loop          : true,
 		centeredSlides: true,
 		autoplay      : false,
-		watchSlidesVisibility: false,
+		watchSlidesVisibility: true,
 		pagination    : {
 			el       : ".media-pagination",
 			clickable: true,
 			dynamicBullets: true,
 		},
+		breakpoints: {
+			320: {
+				slidesPerView : 2
+			},
+			600: {
+				slidesPerView : 3
+			}
+		}
 
 	}
 
