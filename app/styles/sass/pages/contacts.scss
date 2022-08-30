@@ -1,0 +1,98 @@
+.contacts-page {
+    background-color: #e8f2f4;
+    background-image: url(../images/dist/admin/bg-contacts.png);
+    background-position: top 150px center;
+    background-repeat: no-repeat;
+
+
+    &__title {
+        text-align: center;
+       
+    }
+    @media screen and (max-width: $laptop-landscape) {
+        background-position: top 120px center;
+        background-size: calc(100% + 100px) auto;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        background-position: top 120px center;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+        &__title {
+            margin-bottom: 100px;
+        }
+        // .header {
+        //     background-color: #e8f2f4;
+        // }
+    }
+}
+
+.page-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 100vh;
+    overflow-y: auto;
+    text-align: center;
+    background: rgba($color: #221F20, $alpha: 0.2);
+    z-index: 101;
+    display: none;
+    &--open {
+        display: block;
+    }
+    &__inner {
+        background: #FFFFFF;
+        padding: 56px 32px;
+        line-height: 1;
+        /* depth/4 */
+        box-shadow: 0px 64px 64px -48px rgba(33, 31, 32, 0.08);
+        border-radius: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 510px;
+        width: calc(100% - 20px);
+        margin: 30px 0;
+        position: relative;
+    }
+    &__close {
+        background: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        right: 21px;
+        top: 21px;
+        cursor: pointer;
+        svg {
+            pointer-events: none;
+        }
+    }
+    &__title {
+        font-size: 28px;
+        line-height: 42px;  
+        margin-bottom: 16px;
+        font-weight: 700;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__text {
+        
+        font-size: 20px;
+        line-height: 36px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        &__inner {
+            padding: 56px 20px 24px;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+}

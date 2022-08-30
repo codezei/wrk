@@ -1,0 +1,130 @@
+.page-content {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 110px;
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+    &__inner {
+        img {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        p {
+            line-height: 1.5;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Strawford';
+            font-weight: 500;
+            &:not(:first-child) {
+                padding-top: 16px;
+            }
+        }
+        h4 {
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        
+        b {
+            font-weight: 500;
+        }
+        ul, ol {
+            font-family: inherit;
+            color: inherit;
+            font-size: inherit;
+            margin-left: 16px;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        li:not(:last-child) {
+            margin-bottom: 6px;
+        }
+        ul {
+            list-style: none;
+            li {
+                padding-left: 24px;
+                position: relative;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: #eaf2f3;
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                    background-image: url(../images/dist/check-2.svg);
+                    background-size: 7px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $laptop-landscape) {
+        padding: 70px;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        padding: 50px;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 24px;
+    }
+}
+.page-inner {
+    padding: 210px 0 120px;
+    @media screen and (max-width: $laptop-landscape) {
+        padding: 190px 0 100px;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        padding: 180px 0 90px;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 115px 0 80px;
+    }
+}
+
+.brand-page {
+    background-color: #f9e3b9;
+    background-image: url(../images/dist/admin/bg-brand.png);
+    background-position: top 150px center;
+    background-repeat: no-repeat;
+
+
+    &__title {
+        text-align: center;
+       
+    }
+    @media screen and (max-width: $laptop-landscape) {
+        background-position: top 120px center;
+        background-size: calc(100% + 100px) auto;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        background-position: top 120px center;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+        &__title {
+            margin-bottom: 100px;
+        }
+        // .header {
+        //     background-color: #f9e3b9;
+        // }
+    }
+
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.img-part-width {
+    display: inline-block;
+    width: calc(50% - 15px - 4px);
+    &:first-child {
+        margin-right: 30px;
+    }
+}

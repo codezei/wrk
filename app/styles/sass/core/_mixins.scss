@@ -1,0 +1,7 @@
+@mixin cutString($rows) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $rows;
+  overflow-y: hidden;
+  word-break: keep-all;
+}

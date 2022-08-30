@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Brand story</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+	
+	<link rel="stylesheet" href="css/app.min.css">
+	
+
+</head>
+
+<body>
+
+
+<!-- класс media-page служит только для background, его можно повесить просто на body -->
+<article class="media-page">
+    <header class="header" id="header">
+    <div class="container">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="logo">
+                    <img src="./images/dist/admin/logo.svg" alt="">
+                    <!-- <?php if (function_exists('the_custom_logo') && has_custom_logo()) the_custom_logo(); ?> -->
+                </div>
+            </div>
+
+            <div class="header__wrap">
+                <ul class="header__nav">
+                    <li class="menu-item">
+                        <a href="">Find Staff</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Get Work</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Job Search</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Blog</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Gallery</a>
+                    </li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'main_header',
+                    'menu_class'      => 'header__nav',
+                ]); ?> -->
+
+                <div class="header__btn_mob">
+                    <a href="/" class="btn-arrow">Try WrkWrk</a>
+                </div>
+            </div>
+            <div class="header__btn">
+                <a href="/" class="btn-arrow">Try WrkWrk</a>
+            </div>
+            <div id="burger" class="header__burger">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="container">
+        <div class="page-inner">
+            <h2 class="title media-page__title">Media</h2>
+            <h3 class="media-page__subtitle">WrkWrk is a multi award winning temp staffing agency!</h3>
+
+  
+                <div class="media-nav">
+                    <div class="media-nav__item">
+                        <div class="media-select">
+                            <input type="text" class="media-select__select" name="media-filter">
+                            <div class="media-select__value"></div>
+                            <div class="media-select__options">
+                                <div class="media-select__option media-select__option--selected" data-option="2018">2018</div>
+                                <div class="media-select__option" data-option="2017">2017</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="" class="media-nav__item btn">Awards</a>
+                </div>
+       
+                    <!-- Slider main container -->
+                    <div class="swiper  media-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-1.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-2.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-3.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-4.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-5.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+
+               
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination media-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+                    
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                    
+                    
+                    
+                    
+         
+    
+
+
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <div class="footer__column">
+                <div class="footer__logo logo">
+                    <img src="./images/dist/admin/logo.svg" alt="">
+                    <!-- <?php if (function_exists('the_custom_logo') && has_custom_logo()) the_custom_logo(); ?> -->
+                </div>
+                <p class="footer__description">
+                    Sign up to our newsletter to get all the juicy about staffing and working and all that jazz
+                </p>
+                <div class="form-subscribe">
+                    <form action="/" method="get">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit" class="">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__column">
+                <ul>
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">Find Staff</li>
+                    <li class="menu-item">Get Work</li>
+                    <li class="menu-item">About Us</li>
+                    <li class="menu-item">Awards & Media </li>
+                    <li class="menu-item">Gallery</li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'footer_left',
+                    'container_class' => 'footer__wrap',
+                    'menu_class'      => 'footer__nav',
+                ]); ?> -->
+            </div>
+            <div class="footer__column">
+                <ul>
+                    <li class="menu-item">Job search</li>
+                    <li class="menu-item">Blog</li>
+                    <li class="menu-item">Get Support</li>
+                    <li class="menu-item">Contact Us</li>
+                    <li class="menu-item">Join the WrkWrk team </li>
+                    <li class="menu-item">FAQs</li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'footer_right',
+                    'container_class' => 'footer__wrap',
+                    'menu_class'      => 'footer__nav',
+                ]); ?> -->
+            </div>
+            <div class="footer__column">
+                <div class="footer__contact">
+                    <a href="">hello@wrkwrk.ie</a>
+                </div>
+                <div class="footer__social" style="align-items: flex-start;">
+                    <a href="/">
+                        <img src="./images/dist/twitter.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/fb.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/insta.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/linkedin.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/tiktok.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/youtube.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>
+                © 2022 WrkWrk All Rights Reserved
+            </p>
+            <div class="footer__privacy">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</article>
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

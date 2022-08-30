@@ -1,0 +1,151 @@
+.media {
+    &-page {
+        background: #F3ECE9;;
+        &__title {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        &__subtitle {
+            font-family: 'Strawford';
+            font-weight: 400;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    &-nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+        &__item {
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+    &-slider {
+        overflow: visible;
+    }
+    &-slide {
+
+
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 400ms;
+            height: 400px;
+            &:not(.swiper-slide-active) {
+                opacity: 0.8;
+                // transform: scale(0.9);
+                
+            }
+            &__img {
+                margin-bottom: 30px;
+                height: auto;
+            }
+            &__link {
+
+            }
+      
+
+
+    }
+    &-pagination {
+        bottom: -50px !important;
+    }
+
+
+    &-select {
+        position: relative;
+        &__select {
+            display: none;
+        }
+        &__value {
+            position: relative;
+            cursor: pointer;
+
+            background: #221f20;
+            border: 2px solid #221f20;
+            border-radius: 32px;
+            color: #fff;
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1;
+            padding: 18px 48px 16px;
+            transition: .3s;
+            &:hover {
+                background: transparent;
+                color: #221f20;
+                &:before {
+                    content: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.5999 1.45825L9.16657 6.89159C8.5249 7.53325 7.4749 7.53325 6.83324 6.89159L1.3999 1.45825' stroke='%23221F20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+                }
+            }
+
+
+            &:before {
+                content: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.5999 1.45825L9.16657 6.89159C8.5249 7.53325 7.4749 7.53325 6.83324 6.89159L1.3999 1.45825' stroke='white' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 400ms;
+                transform-origin: center;
+                z-index: 1;
+                pointer-events: none;
+            }
+            &--selected {
+                color: #fff;
+            }
+    
+            &--open {
+                &:before {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+            }
+        }
+        &__value--open + &__options {
+            display: block;
+        }
+        &__options {
+            background: #fff;
+            border-radius: 12px;
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 0;
+            width: 100%;
+            display: none;
+            padding: 10px;
+            border: 1px solid #eee;
+            z-index: 10;
+            
+        }
+        &__option {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 16px;
+            font-family: inherit;
+            line-height: 24px;
+            cursor: pointer;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+    
+            &--selected {
+                background: #221f20;
+                color: #fff;
+    
+    
+            }
+            &:hover {
+                background: #221f20;
+                color: #fff;
+            }
+    
+        }
+    }
+}

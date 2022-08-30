@@ -1,0 +1,50 @@
+.we-are {
+    background: #74ABAE;
+
+    * {
+        color: #fff;
+    }
+
+    @media (min-width: 1401px) {
+        .image__small {
+            &:nth-child(1) {
+                right: 0;
+                top: 131px;
+            }
+
+            &:nth-child(2) {
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .bg__images {
+            display: none;
+        }
+    }
+}
+
+.we-are__container {
+    max-width: 850px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.we-are__title {
+    margin-bottom: 80px;
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 50px;
+    }
+}
+
+.we-are__text {
+    p {
+        color: #E9E8E3;
+        font-weight: 600;
+        font-size: 2.4rem;
+    }
+}

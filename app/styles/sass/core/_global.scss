@@ -1,0 +1,394 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Strawford', sans-serif;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #515D6F;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;
+}
+
+b, strong {
+    font-weight: 700;
+    font-family: 'Strawford', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Audacious', sans-serif;
+    color: #221F20;
+    font-weight: 900;
+    margin-bottom: 32px;
+    line-height: 1.2;
+}
+
+h1, .title {
+    font-size: 5.6rem;
+
+    @media (max-width: $laptop-portrait) {
+        font-size: 3.6rem;
+    }
+}
+
+h2 {
+    font-size: 4.2rem;
+
+    @media (max-width: $laptop-portrait) {
+        font-size: 3.5rem;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 3.2rem;
+    }
+}
+
+h3 {
+    font-size: 4rem;
+
+    @media (max-width: $laptop-portrait) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 2.4rem;
+    }
+}
+
+.title-arrow {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-left: 20px;
+        @extend .bg-contain;
+    }
+}
+
+small {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1.2rem;
+}
+
+blockquote {
+    font-weight: 500;
+    text-align: center;
+    padding-left: 50px;
+}
+
+p {
+    font-size: 1.8rem;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.logo {
+    width: 52px;
+    height: 55px;
+}
+
+.btn-group {
+    margin-top: 60px;
+
+    @media (max-width: $laptop-landscape) {
+        margin-top: 32px;
+    }
+
+    @media (min-width: $laptop-portrait + 1) {
+        & > a:not(:first-child) {
+            margin-left: 32px;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    background: #221F20;
+    border-radius: 32px;
+    padding: 18px 48px 16px;
+    color: #fff;
+    line-height: 1;
+    border: 2px solid #221F20;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    @extend .pointer;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            background: transparent;
+            color: #221F20;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        padding: 15px 22px;
+        font-size: 1.4rem;
+    }
+}
+
+.btn-white {
+    @extend .btn;
+    color: #221F20;
+    background: #fff;
+    border-color: #fff;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            background: transparent;
+            color: #fff;
+        }
+    }
+}
+
+.btn-long {
+    @extend .btn;
+    padding: 20px 70px;
+
+    @media (max-width: $mobile) {
+        padding: 14px 64px;
+        font-size: 1.6rem;
+    }
+}
+
+.btn-blue {
+    @extend .btn-long;
+    background: #8FCAE7;
+    color: #221F20;
+    border-color: #8FCAE7;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            color: #8FCAE7;
+        }
+    }
+}
+
+.btn-tp-full {
+    @extend .btn;
+    background: transparent;
+    color: #221F20;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            background: #221F20;
+            color: #fff;
+        }
+    }
+}
+
+.btn-arrow {
+    @extend .btn;
+    padding-right: 60px;
+    padding-left: 36px;
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url('../images/dist/arrow-btn.svg') center / cover no-repeat;
+        position: absolute;
+        right: 23px;
+        top: 12px;
+    }
+
+    @media (min-width: 1025px) {
+        &:hover {
+            &:after {
+                filter: invert(1);
+            }
+        }
+    }
+}
+
+.btn-tp {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.8rem;
+    transition: 0.3s;
+    color: #515D6F;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dashed #515D6F;
+    padding: 10px 23px 10px 0;
+    position: relative;
+    top: -3px;
+
+    @extend .pointer;
+
+    &:after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        right: 0;
+        top: 13px;
+        background: url('../img/arrow-btn-grey.svg') center / cover no-repeat;
+    }
+
+    @media (min-width: 1025px) {
+        &:hover {
+            border-bottom-style: solid;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.btn-tp-blue {
+    @extend .btn-tp;
+    color: #132CA6;
+    border-color: #132CA6;
+
+    &:after {
+        background: url('../img/arrow-btn-blue.svg') center / cover no-repeat;
+    }
+}
+
+.btn-tp-white {
+    @extend .btn-tp;
+    color: #fff;
+    border-color: #fff;
+    &:after {
+        filter: brightness(0) invert(1);
+    }
+}
+
+img, .img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-cont {
+    @extend .img;
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+}
+
+.img-bg {
+    @extend .img;
+    object-fit: cover;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-cover {
+    @extend .bg;
+    background-size: cover;
+}
+
+.bg-contain {
+    @extend .bg;
+    background-size: contain;
+}
+
+.container {
+    max-width: 1370px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: $mobile) {
+        padding: 0 20px;
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+
+.section {
+    padding: 120px 0;
+    position: relative;
+
+    @media (max-width: $laptop-landscape) {
+        padding: 60px 0;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.disable {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.pointer {
+    @media (min-width: $laptop-landscape + 1) {
+        cursor: pointer;
+    }
+}
+
+a {
+    color: #221F20;
+    transition: .2s;
+}
+
+.swiper-pagination-bullet {
+    width: 9px;
+    height: 4px;
+    border-radius: 20px;
+    margin: 0 5px;
+    background-color: #7C4C9B;
+    opacity: 0.3;
+    transition: 0.3s;
+
+    &.swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 20px;
+    }
+}
+
+@media (min-width: 1401px) {
+    .bg__images {
+        z-index: 1;
+    }
+
+    .image__small {
+        position: absolute;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .bg__images {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+.support-page {
+    background-color: #d3e8d6;
+    background-image: url(../images/dist/admin/bg-support.png);
+    background-position: top 150px center;
+    background-repeat: no-repeat;
+
+
+    &__title {
+        text-align: center;
+       
+    }
+    @media screen and (max-width: $laptop-landscape) {
+        background-position: top 120px center;
+        background-size: calc(100% + 100px) auto;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        background-position: top 120px center;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+        &__title {
+            margin-bottom: 100px;
+        }
+
+    }
+}

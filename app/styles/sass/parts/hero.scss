@@ -1,0 +1,64 @@
+.hero {
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+        padding-bottom: 0 !important;
+    }
+}
+
+.hero__title {
+    display: inline-block;
+}
+
+.hero__text {
+    p {
+        font-size: 2.4rem;
+
+        @media (max-width: $laptop-portrait) {
+            font-size: 2.2rem;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.hero__images {
+
+    @media (min-width: $mobile + 1) {
+        position: absolute;
+        bottom: -10px;
+        z-index: 1;
+    }
+
+    @media (min-width: $laptop-portrait + 1) {
+        right: calc((100vw - 1370px - 150px) / 2);
+
+        .hero__img_bg_mob {
+            display: none;
+        }
+    }
+
+    @media (max-width: $laptop-portrait) {
+        right: 0;
+        height: 470px;
+
+        .hero__img_bg {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: $mobile) {
+        height: 331px;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+
+        .hero__img_bg_mob {
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}

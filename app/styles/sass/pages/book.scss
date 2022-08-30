@@ -1,0 +1,75 @@
+.book-page {
+    background-color: #d3e8d6;
+    background-image: url(../images/dist/admin/bg-books.png);
+    background-position: top 150px center;
+    background-repeat: no-repeat;
+    &__title {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 24px;
+        line-height: 36px;
+        color:  #515D6F;
+        font-family: inherit;
+    }
+    &__contacts {
+        margin-top: 60px;
+        &-subtitle {
+            font-weight: 500;
+            margin-bottom: 16px;
+            font-size: 24px;
+            line-height: 36px;
+            color:  #515D6F;
+            font-family: inherit;
+        }
+        &-link {
+            position: relative;
+            padding-left: 40px;
+            color: #132CA6;
+            font-size: 18px;
+            &:before {
+                content: "";
+                display: block;
+                width: 27px;
+                height: 18px;
+                background-image: url(../images/dist/Email-2.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    @media screen and (max-width: $laptop-landscape) {
+        background-position: top 120px center;
+        background-size: calc(100% + 100px) auto;
+    }
+    @media screen and (max-width: $laptop-portrait) {
+        background-position: top 120px center;
+    }
+    @media screen and (max-width: $mobile) {
+        &__title {
+            margin-bottom: 24px;
+        }
+        &__subtitle {
+            margin-bottom: 32px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+        &__contacts {
+            margin-top: 50px;
+            &-subtitle {
+                margin-bottom: 12px;
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+    }
+}

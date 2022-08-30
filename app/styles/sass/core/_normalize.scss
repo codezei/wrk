@@ -1,0 +1,86 @@
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote {
+    margin: 0;
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    appearance: none;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &::placeholder {
+        font-family: inherit;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    appearance: none;
+}
+
+a {
+    appearance: none;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+        cursor: auto;
+    }
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+p {
+    &:empty {
+        display: none;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}

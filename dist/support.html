@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Contact Us</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+	
+	<link rel="stylesheet" href="css/app.min.css">
+	
+
+</head>
+
+<body>
+
+
+<!-- класс support-page служит только для background, его можно повесить просто на body -->
+<article class="support-page">
+    <header class="header" id="header">
+    <div class="container">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="logo">
+                    <img src="./images/dist/admin/logo.svg" alt="">
+                    <!-- <?php if (function_exists('the_custom_logo') && has_custom_logo()) the_custom_logo(); ?> -->
+                </div>
+            </div>
+
+            <div class="header__wrap">
+                <ul class="header__nav">
+                    <li class="menu-item">
+                        <a href="">Find Staff</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Get Work</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Job Search</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Blog</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Gallery</a>
+                    </li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'main_header',
+                    'menu_class'      => 'header__nav',
+                ]); ?> -->
+
+                <div class="header__btn_mob">
+                    <a href="/" class="btn-arrow">Try WrkWrk</a>
+                </div>
+            </div>
+            <div class="header__btn">
+                <a href="/" class="btn-arrow">Try WrkWrk</a>
+            </div>
+            <div id="burger" class="header__burger">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-content">
+                <h2 class="title support-page__title">Support</h2>
+                <form action="" class="page-form support-form">
+                    <h4 class="page-form__title">Enter You details</h4>
+                    <div class="page-form__row">
+                        <div class="page-form__input-wrap">
+                            <input type="text"  name="first-name" required class="form-input page-form__input">
+                            <div class="page-form__input-placeholder">First Name<span class="red">*</span></div>
+                            <span class="error-message"> 
+                                Use letters from a to z
+                            </span>
+                        </div>
+                        <div class="page-form__input-wrap">
+                            <input type="text"  name="last-name" required class="form-input page-form__input">
+                            <div class="page-form__input-placeholder">Last Name<span class="red">*</span></div>
+                            <span class="error-message"> 
+                                Use letters from a to z
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="page-form__row">
+                        <div class="page-form__input-wrap page-form__input-wrap--full-width">
+                            <div class="custom-select">
+                                <input type="text" class="custom-select__select" name="subject"></input>
+                                <div class="custom-select__value form-input" data-default="Select subject">Select subject</div>
+                                <div class="custom-select__options">
+                                    <div class="custom-select__option" data-option="subject1">Subject 1</div>
+                                    <div class="custom-select__option" data-option="subject2">Subject 2</div>
+                                    <div class="custom-select__option" data-option="subject3">Subject 3</div>
+                                    <div class="custom-select__option" data-option="subject4">Subject 4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="page-form__title">Message</h4>
+                    <div class="page-form__row">
+                        <textarea name="" cols="30" rows="10" required placeholder="Enter your text..." class="form-input form-input--textarea"></textarea>
+                        <span class="error-message"> 
+                            Use letters from a to z
+                        </span>
+                    </div>
+                    <button type="submit" class="btn page-form__btn">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="page-popup">
+        <div class="page-popup__inner">
+            <button class="page-popup__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976309 1.31658 -0.0976309 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683418 14.0976 0.292893 13.7071C-0.0976309 13.3166 -0.0976309 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z" fill="#211F20"/>
+                    </svg>                    
+            </button>
+            <h3 class="page-popup__title">Your message was successfully sent</h3>
+            <p class="page-popup__text">We'll contact with you soon.</p>
+            <img src="./images/dist/admin/support-popup-img.jpg" alt="" class="page-popup__img">
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <div class="footer__column">
+                <div class="footer__logo logo">
+                    <img src="./images/dist/admin/logo.svg" alt="">
+                    <!-- <?php if (function_exists('the_custom_logo') && has_custom_logo()) the_custom_logo(); ?> -->
+                </div>
+                <p class="footer__description">
+                    Sign up to our newsletter to get all the juicy about staffing and working and all that jazz
+                </p>
+                <div class="form-subscribe">
+                    <form action="/" method="get">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit" class="">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__column">
+                <ul>
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">Find Staff</li>
+                    <li class="menu-item">Get Work</li>
+                    <li class="menu-item">About Us</li>
+                    <li class="menu-item">Awards & Media </li>
+                    <li class="menu-item">Gallery</li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'footer_left',
+                    'container_class' => 'footer__wrap',
+                    'menu_class'      => 'footer__nav',
+                ]); ?> -->
+            </div>
+            <div class="footer__column">
+                <ul>
+                    <li class="menu-item">Job search</li>
+                    <li class="menu-item">Blog</li>
+                    <li class="menu-item">Get Support</li>
+                    <li class="menu-item">Contact Us</li>
+                    <li class="menu-item">Join the WrkWrk team </li>
+                    <li class="menu-item">FAQs</li>
+                </ul>
+                <!-- <?php wp_nav_menu([
+                    'theme_location'  => 'footer_right',
+                    'container_class' => 'footer__wrap',
+                    'menu_class'      => 'footer__nav',
+                ]); ?> -->
+            </div>
+            <div class="footer__column">
+                <div class="footer__contact">
+                    <a href="">hello@wrkwrk.ie</a>
+                </div>
+                <div class="footer__social" style="align-items: flex-start;">
+                    <a href="/">
+                        <img src="./images/dist/twitter.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/fb.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/insta.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/linkedin.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/tiktok.svg" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./images/dist/youtube.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>
+                © 2022 WrkWrk All Rights Reserved
+            </p>
+            <div class="footer__privacy">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</article>
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

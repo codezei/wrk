@@ -1,0 +1,79 @@
+<!--#set var="title" value="Brand story" -->
+<!--#include virtual="/parts/header.html" -->
+<!-- класс media-page служит только для background, его можно повесить просто на body -->
+<article class="media-page">
+    <!--#include virtual="/parts/header-block.html" -->
+    <div class="container">
+        <div class="page-inner">
+            <h2 class="title media-page__title">Media</h2>
+            <h3 class="media-page__subtitle">WrkWrk is a multi award winning temp staffing agency!</h3>
+
+  
+                <div class="media-nav">
+                    <div class="media-nav__item">
+                        <div class="media-select">
+                            <input type="text" class="media-select__select" name="media-filter">
+                            <div class="media-select__value"></div>
+                            <div class="media-select__options">
+                                <div class="media-select__option media-select__option--selected" data-option="2018">2018</div>
+                                <div class="media-select__option" data-option="2017">2017</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="" class="media-nav__item btn">Awards</a>
+                </div>
+       
+                    <!-- Slider main container -->
+                    <div class="swiper  media-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-1.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-2.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-3.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-4.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+                            <div class="swiper-slide media-slide"  data-filter="2018">
+                                <img src="./images/dist/admin/slide-img-5.jpg" alt="" class="media-slide__img">
+                                <a href="" class="media-slide__link" target="_blank">Link</a>
+                            </div>
+
+               
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination media-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+                    
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                    
+                    
+                    
+                    
+         
+    
+
+
+        </div>
+    </div>
+    <!--#include virtual="/parts/footer-block.html" -->
+</article>
+
+
+<!--#include virtual="/parts/footer.html" -->

@@ -1,0 +1,217 @@
+.search {
+    padding-bottom: 0;
+
+    @media (max-width: $mobile) {
+        padding-top: 0;
+    }
+}
+
+.search__container {
+    background: #b6d8ba;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 20px;
+
+    @media (max-width: $laptop-portrait - 1) {
+        padding: 60px 20px;
+    }
+
+    @media (max-width: $mobile) {
+        margin: 0 -20px;
+        border-radius: 0;
+    }
+}
+
+.search__title {
+    z-index: 2;
+    text-align: center;
+
+    @media (min-width: $laptop-portrait + 1) {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: $mobile) {
+        max-width: 230px;
+    }
+}
+
+.search__item {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0 4px 60px rgba(40, 55, 79, 0.1);
+    border-radius: 32px;
+    max-width: 814px;
+    width: 100%;
+    height: 56px;
+    padding: 4px 3px 4px 22px;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+        height: 48px;
+    }
+
+    .search__input {
+        position: relative;
+        width: 100%;
+        padding-left: 30px;
+
+        @media (max-width: $mobile) {
+            padding-left: 23px;
+        }
+
+        &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            background: url('../img/search.svg') center / cover no-repeat;
+
+            @media (max-width: $mobile) {
+                width: 13px;
+                height: 13px;
+                top: 7px;
+            }
+        }
+
+        input {
+            font-size: 1.4rem;
+
+            &::placeholder {
+                color: #AFB5C1;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .search__btn {
+        color: #221F20;
+        padding: 14px 38px;
+        font-size: 1.4rem;
+        background: #8FCAE7;
+        border-radius: 32px;
+        font-weight: 600;
+
+        @media (max-width: $mobile) {
+            padding: 9px 26px;
+        }
+    }
+}
+
+.search__icon {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        width: 1px;
+        height: 24px;
+        background: #AFB5C1;
+    }
+
+    @media (min-width: $mobile + 1) {
+        display: none;
+    }
+}
+
+.search__dropdown {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $laptop-portrait - 1) {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.search__select {
+    position: relative;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $laptop-portrait + 1) {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 24px;
+            background: #AFB5C1;
+            margin-right: 24px;
+        }
+    }
+
+    @media (max-width: $laptop-portrait - 1) {
+        background: #FFFFFF;
+        box-shadow: 0 4px 60px rgba(40, 55, 79, 0.1);
+        border-radius: 32px;
+        height: 35px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 6px;
+        background: url('../img/arrow-down.svg') center / contain no-repeat;
+        margin-left: 7px;
+
+        @media (max-width: $laptop-portrait - 1) {
+            margin-left: auto;
+        }
+    }
+}
+
+.search__list {
+    display: none;
+}
+
+.search__img {
+    position: absolute;
+    z-index: 1;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.search__text {
+    max-width: 750px;
+    margin: 48px auto 0;
+    text-align: center;
+    color: #515D6F;
+    font-size: 2rem;
+    line-height: 1.5;
+    z-index: 2;
+
+    @media (max-width: $mobile) {
+        font-size: 1.4rem;
+        opacity: 0.8;
+        color: #221F20;
+        margin-top: 32px;
+    }
+}

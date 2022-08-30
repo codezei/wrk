@@ -1,0 +1,90 @@
+.join {
+    background-color: rgba(182, 216, 186, 0.3);
+    text-align: center;
+
+    .btn-tp-blue {
+        margin-top: 16px;
+
+        @media (max-width: $mobile) {
+            margin-top: 40px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        padding: 80px 0;
+    }
+}
+
+.join__title {
+    font-size: 5.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+
+    @media (min-width: $laptop-portrait + 1) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 3.2rem;
+        margin-bottom: 40px;
+    }
+}
+
+.join__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+
+    @media (max-width: $mobile) {
+        margin: 0 -12px;
+    }
+}
+
+.join__item {
+    margin: 0 16px 32px;
+    padding: 16px 40px;
+    color: #221F20;
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 90px;
+    line-height: 1;
+    font-weight: 500;
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 20px;
+        padding: 12px 20px;
+    }
+
+    @media (max-width: $mobile) {
+        margin: 0 6px 12px;
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        background: url('../img/check.svg') center / contain no-repeat;
+
+        @media (max-width: $laptop-portrait) {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+        }
+    }
+}

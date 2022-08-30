@@ -1,0 +1,175 @@
+$duration: 50s;
+
+.home.hero {
+    padding: 208px 0 50px;
+    background: rgba(143, 202, 231, 0.6);
+
+    @media (max-width: $laptop-portrait) {
+        padding-top: 179px;
+    }
+
+    @media (max-width: $mobile) {
+        padding-top: 143px;
+    }
+
+    .hero__title {
+        margin: 0;
+
+        @media (max-width: $laptop-portrait) {
+            font-size: 4rem;
+            line-height: 1.3;
+        }
+    }
+
+    .hero__content {
+        max-width: 600px;
+
+        @media (max-width: $laptop-portrait) {
+            max-width: 500px;
+        }
+    }
+}
+
+.hero__content {
+    z-index: 2;
+}
+
+.hero__subtitle {
+    color: #4B778C;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (max-width: $laptop-portrait) {
+        font-size: 1.6rem;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+}
+
+.hero__buttons {
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $laptop-portrait) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 32px 0 0;
+
+        & > a:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 24px 0;
+    }
+}
+
+.hero__bottom_title {
+    display: flex;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/spotify.svg') center / contain no-repeat;
+        margin-right: 16px;
+        vertical-align: middle;
+    }
+}
+
+.hero-slider {
+    height: 144px;
+    background: #D9EAED;
+    overflow: hidden;
+
+    @media (max-width: $laptop-portrait) {
+        height: 100px;
+    }
+}
+
+.hero-slider__container {
+    position: relative;
+    height: 100%;
+}
+
+.hero-slider__list {
+    display: inline-block;
+    height: 100%;
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: $duration;
+}
+
+.hero-slider__item {
+    width: 120px;
+    height: 100%;
+    display: inline-block;
+    margin-right: 100px;
+
+    @media (max-width: $laptop-portrait) {
+        width: 90px;
+        margin-right: 60px;
+    }
+
+    @media (max-width: $mobile) {
+        width: 75px;
+        margin-right: 20px;
+    }
+
+    img {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: $laptop-landscape + 1) {
+    .hero__bottom_wrap {
+        display: flex;
+        align-items: center;
+
+        .hero__bottom_subtitle {
+            margin: 0;
+        }
+
+        & > a {
+            margin-left: 16px;
+        }
+    }
+}
+
+@media (max-width: $laptop-portrait) {
+    .hero__bottom {
+        display: none;
+    }
+}
+
+@media (min-width: $mobile + 1) {
+    .hero__container {
+        display: flex;
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

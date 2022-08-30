@@ -1,0 +1,103 @@
+.team__head {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+
+    @media (max-width: $laptop-portrait) {
+        margin-bottom: 30px;
+    }
+}
+
+.team__subtitle {
+    font-size: 2.4rem;
+}
+
+.team__list {
+    display: grid;
+    grid-gap: 40px;
+
+    @media (min-width: $mobile + 1) {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+.team__body {
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 1;
+    height: 500px;
+    filter: grayscale(100%);
+    border: 1px solid #B6D8BA;
+
+    @media (max-width: $mobile) {
+        height: 380px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.team__item:hover {
+    .team__body {
+        filter: grayscale(0);
+
+        .team__img {
+            display: none;
+        }
+
+        .team__gif {
+            display: block;
+        }
+    }
+}
+
+.team__info {
+    background: #B6D8BA;
+    border-radius: 14px;
+    padding: 20px;
+    overflow: hidden;
+    margin: -80px 20px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.team__name {
+    font-size: 2.6rem;
+    font-family: Audacious,sans-serif;
+    color: #221f20;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+
+    &:after {
+        background-image: url('../img/arrow-black.svg');
+    }
+}
+
+.team__job {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: #221F20;
+    text-transform: uppercase;
+}
+
+.team__social {
+    height: 24px;
+    width: 24px;
+    opacity: 1;
+    transition: .2s;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+}
